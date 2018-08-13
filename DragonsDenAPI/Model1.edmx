@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DragonsDen2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Binary_metrics' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Binary_metrics">
+          <Property Name="Algorithms" Type="nvarchar" MaxLength="255" />
+          <Property Name="Accuracy" Type="float" />
+          <Property Name="Precision" Type="float" />
+          <Property Name="Recall" Type="float" />
+          <Property Name="F-Score" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Binary_prediction' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Binary_prediction">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="Forest_Probability" Type="float" />
+          <Property Name="Forest_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Boosted_Probability" Type="float" />
+          <Property Name="Boosted_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Logistic_Probability" Type="float" />
+          <Property Name="Logistic_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nnet_Probability" Type="float" />
+          <Property Name="Nnet_Prediction" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Labeled_test_data' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Labeled_test_data">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="setting3" Type="float" />
+          <Property Name="s1" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s5" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s10" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s16" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s18" Type="float" />
+          <Property Name="s19" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+          <Property Name="RUL" Type="float" />
+          <Property Name="label1" Type="float" />
+          <Property Name="label2" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Labeled_train_data' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Labeled_train_data">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="setting3" Type="float" />
+          <Property Name="s1" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s5" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s10" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s16" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s18" Type="float" />
+          <Property Name="s19" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+          <Property Name="RUL" Type="int" />
+          <Property Name="label1" Type="float" />
+          <Property Name="label2" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Multiclass_metrics' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Multiclass_metrics">
+          <Property Name="Algorithms" Type="nvarchar" MaxLength="255" />
+          <Property Name="Overall accuracy" Type="float" />
+          <Property Name="Average accuracy" Type="float" />
+          <Property Name="Micro-averaged Precision" Type="float" />
+          <Property Name="Macro-averaged Precision" Type="float" />
+          <Property Name="Micro-averaged Recall" Type="float" />
+          <Property Name="Macro-averaged Recall" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Multiclass_prediction' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Multiclass_prediction">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="Forest_Probability_Class_0" Type="float" />
+          <Property Name="Forest_Probability_Class_1" Type="float" />
+          <Property Name="Forest_Probability_Class_2" Type="float" />
+          <Property Name="Forest_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Boosted_Probability_Class_0" Type="float" />
+          <Property Name="Boosted_Probability_Class_1" Type="float" />
+          <Property Name="Boosted_Probability_Class_2" Type="float" />
+          <Property Name="Boosted_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Multinomial_Probability_Class_0" Type="float" />
+          <Property Name="Multinomial_Probability_Class_1" Type="float" />
+          <Property Name="Multinomial_Probability_Class_2" Type="float" />
+          <Property Name="Multinomial_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nnet_Probability_Class_0" Type="float" />
+          <Property Name="Nnet_Probability_Class_1" Type="float" />
+          <Property Name="Nnet_Probability_Class_2" Type="float" />
+          <Property Name="Nnet_Prediction" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityType Name="PM_Models">
+          <Key>
+            <PropertyRef Name="model_name" />
+          </Key>
+          <Property Name="model_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="model" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.PM_Test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PM_Test">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="setting3" Type="float" />
+          <Property Name="s1" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s5" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s10" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s16" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s18" Type="float" />
+          <Property Name="s19" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.PM_Train' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PM_Train">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="setting3" Type="float" />
+          <Property Name="s1" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s5" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s10" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s16" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s18" Type="float" />
+          <Property Name="s19" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.PM_Truth' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PM_Truth">
+          <Property Name="RUL" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Regression_metrics' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Regression_metrics">
+          <Property Name="Algorithms" Type="nvarchar" MaxLength="255" />
+          <Property Name="Mean Absolute Error" Type="float" />
+          <Property Name="Root Mean Squared Error" Type="float" />
+          <Property Name="Relative Absolute Error" Type="float" />
+          <Property Name="Relative Squared Error" Type="float" />
+          <Property Name="Coefficient of Determination" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.Regression_prediction' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Regression_prediction">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="Forest_Prediction" Type="float" />
+          <Property Name="Boosted_Prediction" Type="float" />
+          <Property Name="Poisson_Prediction" Type="float" />
+          <Property Name="Nnet_Prediction" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.test_Features' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test_Features">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="setting3" Type="float" />
+          <Property Name="s1" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s5" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s10" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s16" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s18" Type="float" />
+          <Property Name="s19" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+          <Property Name="RUL" Type="float" />
+          <Property Name="label1" Type="float" />
+          <Property Name="label2" Type="float" />
+          <Property Name="a1" Type="float" />
+          <Property Name="a2" Type="float" />
+          <Property Name="a3" Type="float" />
+          <Property Name="a4" Type="float" />
+          <Property Name="a5" Type="float" />
+          <Property Name="a6" Type="float" />
+          <Property Name="a7" Type="float" />
+          <Property Name="a8" Type="float" />
+          <Property Name="a9" Type="float" />
+          <Property Name="a10" Type="float" />
+          <Property Name="a11" Type="float" />
+          <Property Name="a12" Type="float" />
+          <Property Name="a13" Type="float" />
+          <Property Name="a14" Type="float" />
+          <Property Name="a15" Type="float" />
+          <Property Name="a16" Type="float" />
+          <Property Name="a17" Type="float" />
+          <Property Name="a18" Type="float" />
+          <Property Name="a19" Type="float" />
+          <Property Name="a20" Type="float" />
+          <Property Name="a21" Type="float" />
+          <Property Name="sd1" Type="float" />
+          <Property Name="sd2" Type="float" />
+          <Property Name="sd3" Type="float" />
+          <Property Name="sd4" Type="float" />
+          <Property Name="sd5" Type="float" />
+          <Property Name="sd6" Type="float" />
+          <Property Name="sd7" Type="float" />
+          <Property Name="sd8" Type="float" />
+          <Property Name="sd9" Type="float" />
+          <Property Name="sd10" Type="float" />
+          <Property Name="sd11" Type="float" />
+          <Property Name="sd12" Type="float" />
+          <Property Name="sd13" Type="float" />
+          <Property Name="sd14" Type="float" />
+          <Property Name="sd15" Type="float" />
+          <Property Name="sd16" Type="float" />
+          <Property Name="sd17" Type="float" />
+          <Property Name="sd18" Type="float" />
+          <Property Name="sd19" Type="float" />
+          <Property Name="sd20" Type="float" />
+          <Property Name="sd21" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.test_Features_Normalized' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test_Features_Normalized">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="float" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+          <Property Name="RUL" Type="float" />
+          <Property Name="label1" Type="float" />
+          <Property Name="label2" Type="float" />
+          <Property Name="a2" Type="float" />
+          <Property Name="a3" Type="float" />
+          <Property Name="a4" Type="float" />
+          <Property Name="a6" Type="float" />
+          <Property Name="a7" Type="float" />
+          <Property Name="a8" Type="float" />
+          <Property Name="a9" Type="float" />
+          <Property Name="a11" Type="float" />
+          <Property Name="a12" Type="float" />
+          <Property Name="a13" Type="float" />
+          <Property Name="a14" Type="float" />
+          <Property Name="a15" Type="float" />
+          <Property Name="a17" Type="float" />
+          <Property Name="a20" Type="float" />
+          <Property Name="a21" Type="float" />
+          <Property Name="sd2" Type="float" />
+          <Property Name="sd3" Type="float" />
+          <Property Name="sd4" Type="float" />
+          <Property Name="sd6" Type="float" />
+          <Property Name="sd7" Type="float" />
+          <Property Name="sd8" Type="float" />
+          <Property Name="sd9" Type="float" />
+          <Property Name="sd11" Type="float" />
+          <Property Name="sd12" Type="float" />
+          <Property Name="sd13" Type="float" />
+          <Property Name="sd14" Type="float" />
+          <Property Name="sd15" Type="float" />
+          <Property Name="sd17" Type="float" />
+          <Property Name="sd20" Type="float" />
+          <Property Name="sd21" Type="float" />
+          <Property Name="cycle_orig" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.train_Features' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="train_Features">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="setting3" Type="float" />
+          <Property Name="s1" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s5" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s10" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s16" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s18" Type="float" />
+          <Property Name="s19" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+          <Property Name="RUL" Type="int" />
+          <Property Name="label1" Type="float" />
+          <Property Name="label2" Type="float" />
+          <Property Name="a1" Type="float" />
+          <Property Name="a2" Type="float" />
+          <Property Name="a3" Type="float" />
+          <Property Name="a4" Type="float" />
+          <Property Name="a5" Type="float" />
+          <Property Name="a6" Type="float" />
+          <Property Name="a7" Type="float" />
+          <Property Name="a8" Type="float" />
+          <Property Name="a9" Type="float" />
+          <Property Name="a10" Type="float" />
+          <Property Name="a11" Type="float" />
+          <Property Name="a12" Type="float" />
+          <Property Name="a13" Type="float" />
+          <Property Name="a14" Type="float" />
+          <Property Name="a15" Type="float" />
+          <Property Name="a16" Type="float" />
+          <Property Name="a17" Type="float" />
+          <Property Name="a18" Type="float" />
+          <Property Name="a19" Type="float" />
+          <Property Name="a20" Type="float" />
+          <Property Name="a21" Type="float" />
+          <Property Name="sd1" Type="float" />
+          <Property Name="sd2" Type="float" />
+          <Property Name="sd3" Type="float" />
+          <Property Name="sd4" Type="float" />
+          <Property Name="sd5" Type="float" />
+          <Property Name="sd6" Type="float" />
+          <Property Name="sd7" Type="float" />
+          <Property Name="sd8" Type="float" />
+          <Property Name="sd9" Type="float" />
+          <Property Name="sd10" Type="float" />
+          <Property Name="sd11" Type="float" />
+          <Property Name="sd12" Type="float" />
+          <Property Name="sd13" Type="float" />
+          <Property Name="sd14" Type="float" />
+          <Property Name="sd15" Type="float" />
+          <Property Name="sd16" Type="float" />
+          <Property Name="sd17" Type="float" />
+          <Property Name="sd18" Type="float" />
+          <Property Name="sd19" Type="float" />
+          <Property Name="sd20" Type="float" />
+          <Property Name="sd21" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.train_Features_Normalized' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="train_Features_Normalized">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="float" />
+          <Property Name="setting1" Type="float" />
+          <Property Name="setting2" Type="float" />
+          <Property Name="s2" Type="float" />
+          <Property Name="s3" Type="float" />
+          <Property Name="s4" Type="float" />
+          <Property Name="s6" Type="float" />
+          <Property Name="s7" Type="float" />
+          <Property Name="s8" Type="float" />
+          <Property Name="s9" Type="float" />
+          <Property Name="s11" Type="float" />
+          <Property Name="s12" Type="float" />
+          <Property Name="s13" Type="float" />
+          <Property Name="s14" Type="float" />
+          <Property Name="s15" Type="float" />
+          <Property Name="s17" Type="float" />
+          <Property Name="s20" Type="float" />
+          <Property Name="s21" Type="float" />
+          <Property Name="RUL" Type="int" />
+          <Property Name="label1" Type="float" />
+          <Property Name="label2" Type="float" />
+          <Property Name="a2" Type="float" />
+          <Property Name="a3" Type="float" />
+          <Property Name="a4" Type="float" />
+          <Property Name="a6" Type="float" />
+          <Property Name="a7" Type="float" />
+          <Property Name="a8" Type="float" />
+          <Property Name="a9" Type="float" />
+          <Property Name="a11" Type="float" />
+          <Property Name="a12" Type="float" />
+          <Property Name="a13" Type="float" />
+          <Property Name="a14" Type="float" />
+          <Property Name="a15" Type="float" />
+          <Property Name="a17" Type="float" />
+          <Property Name="a20" Type="float" />
+          <Property Name="a21" Type="float" />
+          <Property Name="sd2" Type="float" />
+          <Property Name="sd3" Type="float" />
+          <Property Name="sd4" Type="float" />
+          <Property Name="sd6" Type="float" />
+          <Property Name="sd7" Type="float" />
+          <Property Name="sd8" Type="float" />
+          <Property Name="sd9" Type="float" />
+          <Property Name="sd11" Type="float" />
+          <Property Name="sd12" Type="float" />
+          <Property Name="sd13" Type="float" />
+          <Property Name="sd14" Type="float" />
+          <Property Name="sd15" Type="float" />
+          <Property Name="sd17" Type="float" />
+          <Property Name="sd20" Type="float" />
+          <Property Name="sd21" Type="float" />
+          <Property Name="cycle_orig" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DragonsDen2.dbo.wt_Binary_prediction' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="wt_Binary_prediction">
+          <Property Name="id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="Forest_Probability" Type="float" />
+          <Property Name="Forest_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Boosted_Probability" Type="float" />
+          <Property Name="Boosted_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Logistic_Probability" Type="float" />
+          <Property Name="Logistic_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nnet_Probability" Type="float" />
+          <Property Name="Nnet_Prediction" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityType Name="wt_binary_prediction2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="test_id" Type="int" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="Forest_Probability" Type="float" />
+          <Property Name="Forest_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Boosted_Probability" Type="float" />
+          <Property Name="Boosted_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Logistic_Probability" Type="float" />
+          <Property Name="Logistic_Prediction" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nnet_Probability" Type="float" />
+          <Property Name="Nnet_Prediction" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="DragonsDen2ModelStoreContainer">
+          <EntitySet Name="PM_Models" EntityType="Self.PM_Models" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="wt_binary_prediction2" EntityType="Self.wt_binary_prediction2" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DragonsDen2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PM_Models">
+          <Key>
+            <PropertyRef Name="model_name" />
+          </Key>
+          <Property Name="model_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DragonsDen2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PM_Models" EntityType="Self.PM_Models" />
+          <EntitySet Name="wt_binary_prediction2" EntityType="DragonsDen2Model.wt_binary_prediction2" />
+        </EntityContainer>
+        <EntityType Name="wt_binary_prediction2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="test_id" Type="Int32" />
+          <Property Name="cycle" Type="Int32" />
+          <Property Name="Forest_Probability" Type="Double" />
+          <Property Name="Forest_Prediction" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Boosted_Probability" Type="Double" />
+          <Property Name="Boosted_Prediction" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Logistic_Probability" Type="Double" />
+          <Property Name="Logistic_Prediction" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Nnet_Probability" Type="Double" />
+          <Property Name="Nnet_Prediction" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DragonsDen2ModelStoreContainer" CdmEntityContainer="DragonsDen2Entities">
+          <EntitySetMapping Name="PM_Models">
+            <EntityTypeMapping TypeName="DragonsDen2Model.PM_Models">
+              <MappingFragment StoreEntitySet="PM_Models">
+                <ScalarProperty Name="model_name" ColumnName="model_name" />
+                <ScalarProperty Name="model" ColumnName="model" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wt_binary_prediction2">
+            <EntityTypeMapping TypeName="DragonsDen2Model.wt_binary_prediction2">
+              <MappingFragment StoreEntitySet="wt_binary_prediction2">
+                <ScalarProperty Name="Nnet_Prediction" ColumnName="Nnet_Prediction" />
+                <ScalarProperty Name="Nnet_Probability" ColumnName="Nnet_Probability" />
+                <ScalarProperty Name="Logistic_Prediction" ColumnName="Logistic_Prediction" />
+                <ScalarProperty Name="Logistic_Probability" ColumnName="Logistic_Probability" />
+                <ScalarProperty Name="Boosted_Prediction" ColumnName="Boosted_Prediction" />
+                <ScalarProperty Name="Boosted_Probability" ColumnName="Boosted_Probability" />
+                <ScalarProperty Name="Forest_Prediction" ColumnName="Forest_Prediction" />
+                <ScalarProperty Name="Forest_Probability" ColumnName="Forest_Probability" />
+                <ScalarProperty Name="cycle" ColumnName="cycle" />
+                <ScalarProperty Name="test_id" ColumnName="test_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
