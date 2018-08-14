@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DragonsDenAPI.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -16,9 +17,10 @@ namespace DragonsDenAPI.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var temp = SQLHelper.GetResults(id);
+            return Json(temp);
         }
 
         // POST api/values
