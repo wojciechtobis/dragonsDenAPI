@@ -27,5 +27,6 @@ namespace DragonsDenAPI
     
         public virtual DbSet<PM_Models> PM_Models { get; set; }
         public virtual DbSet<wt_binary_prediction2> wt_binary_prediction2 { get; set; }
+        public virtual DbSet<wt_regression_prediction> wt_regression_prediction { get; set; }
     }
 }

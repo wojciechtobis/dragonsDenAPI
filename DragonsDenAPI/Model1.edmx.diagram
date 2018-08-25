@@ -7,6 +7,7 @@
       <Diagram DiagramId="d0844d3ce4134a5bbba0033b85a65135" Name="Diagram1">
         <EntityTypeShape EntityType="DragonsDen2Model.PM_Models" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DragonsDen2Model.wt_binary_prediction2" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DragonsDen2Model.wt_regression_prediction" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
